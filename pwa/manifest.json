@@ -1,0 +1,21 @@
+{
+  "name": "Notly",
+  "short_name": "Notly",
+  "description": "Prenez et centralisez vos notes rapidement",
+  "start_url": "/index.php",
+  "display": "standalone",
+  "background_color": "#27C7D4",
+  "theme_color": "#27C7D4",
+  "icons": [
+    {
+      "src": "../img/icone192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "../img/icone512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

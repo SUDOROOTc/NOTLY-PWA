@@ -1,0 +1,147 @@
+:root {
+  --primary: #27C7D4;   /* bleu officiel */
+  --white: #FFFFFF;     /* blanc */
+  --bg-light: #FDF0E7;  /* fond clair */
+  --accent: #FE9063;    /* orange accent */
+  --secondary: #EA5863; /* rouge secondaire */
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-light);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  color: var(--white);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+header .logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+header .btn-logout {
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+header .btn-logout:hover {
+  background-color: var(--accent);
+}
+
+/* Main container */
+.main-container {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+/* Sidebar cartes */
+.sidebar {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.note-card {
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.note-card:hover {
+  transform: translateY(-3px);
+}
+
+.note-card .status {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+/* Contenu central */
+.content {
+  flex: 1;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.content h2 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+/* Formulaire vertical */
+.content form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.content form input,
+.content form select,
+.content form button {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+.content form input:focus,
+.content form select:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.content form button {
+  background-color: var(--primary);
+  color: var(--white);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.content form button:hover {
+  background-color: var(--accent);
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .note-card {
+    min-width: 200px;
+  }
+}

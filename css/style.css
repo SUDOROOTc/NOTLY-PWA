@@ -1,0 +1,203 @@
+:root {
+    --color-primary: #27C7D4;        /* Couleur accent / header */
+    --color-bg: #FFFFFF;             /* Fond général */
+    --color-hero-bg: #FDF0E7;        /* Fond hero clair */
+    --color-text: #222222;           /* Texte principal sombre */
+    --color-text-secondary: #555555; /* Texte secondaire */
+    --color-btn-primary: #27C7D4;    /* Bouton principal */
+    --color-btn-primary-hover: #1AA1B1; /* Hover bouton principal */
+    --color-btn-secondary: #FE9063;  /* Bouton secondaire */
+    --color-btn-secondary-hover: #EA5863; /* Hover bouton secondaire */
+}
+
+/* Reset basique */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header simplifié */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: #FFFFFF;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-login, .btn-register {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.btn-login {
+    background-color: #FFFFFF;
+    color: var(--color-primary);
+}
+
+.btn-login:hover {
+    background-color: var(--color-btn-secondary-hover);
+    color: #FFFFFF;
+}
+
+.btn-register {
+    background-color: var(--color-btn-primary);
+    color: #FFFFFF;
+}
+
+.btn-register:hover {
+    background-color: var(--color-btn-primary-hover);
+}
+
+/* Hero */
+.hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: var(--color-hero-bg);
+    border-radius: 12px;
+    margin: 1rem;
+}
+
+.hero h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    color: var(--color-text-secondary);
+}
+
+.btn-container {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: var(--color-btn-primary);
+    color: #FFFFFF;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-btn-primary-hover);
+}
+
+.btn-secondary {
+    background-color: var(--color-btn-secondary);
+    color: #FFFFFF;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-btn-secondary-hover);
+}
+
+.engagement {
+    margin-top: 1rem;
+    color: var(--color-text-secondary);
+    display: flex;
+    gap: 1rem;
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-hero-bg);
+    color: var(--color-text);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+/* Responsive mobile-first */
+
+/* Petits écrans (< 480px) */
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    .hero p {
+        font-size: 0.95rem;
+    }
+    .header-buttons {
+        width: 100%;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+    header {
+        padding: 1rem;
+    }
+}
+
+/* Tablettes (481px à 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .header-buttons {
+        gap: 0.75rem;
+    }
+}
+
+/* Desktop (>768px) */
+@media (min-width: 769px) {
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1.2rem;
+    }
+    .btn-container a {
+        padding: 0.6rem 1.2rem;
+    }
+}
+
