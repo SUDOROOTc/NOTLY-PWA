@@ -33,8 +33,8 @@
             <h2>Centralisez, structurez, analysez </h2>
             <p>NOTLY vous permet de prendre les informations  rapidement, de les centraliser et de les synchroniser automatiquement dès que vous êtes en ligne.</p>
             <div class="btn-container">
-                <a href="./php/inscription.php" class="btn-primary">Commencer</a>
-                <a href="./php/connexion.php" class="btn-secondary">Connexion</a>
+                <a href="./php/inscription.php" class="btn-primary">Offline</a>
+                <a href="./php/acceuil.php" class="btn-secondary">Online</a>
             </div>
 
         </section>
@@ -45,6 +45,7 @@
         © NOTLY 2025
     </footer>
 
-  
+    <script src="js/indexedDB.js"></script>
+
 </body>
 </html>
