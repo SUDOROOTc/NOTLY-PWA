@@ -1,7 +1,10 @@
 const cacheName = 'notly-v1';
 const assets = [
   '../index.php',
-  '../css/style.css'
+  '../css/style.css',
+  '../js/indexedDB.js',
+  '../js/insert_product.js',
+  '../js/insert_produit_phase1.js',
 ];
 
 // Installation du SW

@@ -22,8 +22,8 @@
     <header>
         <h1 class="logo">NOTLY</h1>
         <div class="header-buttons">
-            <a href="connexion.php" class="btn-login">Se connecter</a>
-            <a href="inscription.php" class="btn-register">S’inscrire</a>
+            <a href="./php/connexion.php" class="btn-login">Se connecter</a>
+            <a href="./php/inscription.php" class="btn-register">S’inscrire</a>
         </div>
     </header>
 
@@ -33,8 +33,8 @@
             <h2>Centralisez, structurez, analysez </h2>
             <p>NOTLY vous permet de prendre les informations  rapidement, de les centraliser et de les synchroniser automatiquement dès que vous êtes en ligne.</p>
             <div class="btn-container">
-                <a href="./php/inscription.php" class="btn-primary">Offline</a>
-                <a href="./php/acceuil.php" class="btn-secondary">Online</a>
+            
+                <a href="./php/acceuil.php" class="btn-secondary">Commencer</a>
             </div>
 
         </section>
@@ -46,6 +46,9 @@
     </footer>
 
     <script src="js/indexedDB.js"></script>
+    <script src="js/insert_produit_phase1.js"></script>
+    <script src="js/insert_produit_phase2.js"></script>
+    <script src="js/test.js"></script>
 
 </body>
 </html>
