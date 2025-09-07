@@ -4,7 +4,7 @@
 $host = "localhost";     // ou 127.0.0.1
 $user = "root";          // ton utilisateur MySQL
 $password = "";          // ton mot de passe MySQL
-$dbname = "database_notly";    // le nom de ta base de données
+$dbname = "notly_db";    // le nom de ta base de données
 
 // Créer la connexion
 $conn = new mysqli($host, $user, $password, $dbname);

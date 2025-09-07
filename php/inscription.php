@@ -1,17 +1,6 @@
 <?php
-// Connexion à la base de données
-$servername = "localhost";
-$username = "root";   // ⚠️ Mets ton user MySQL si ce n'est pas root
-$password = "";       // ⚠️ Mets ton mot de passe MySQL si tu en as mis un
-$dbname = "database_notly"; // ⚠️ Mets le nom de ta base de données
-
-// Crée la connexion
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Vérifie la connexion
-if ($conn->connect_error) {
-    die("Connexion échouée: " . $conn->connect_error);
-}
+session_start();
+include 'db_connect.php'; // connexion à la base
 
 // Gestion du formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -33,13 +22,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         try {
             if ($stmt->execute()) {
-                // Rediriger vers la page de connexion
+                // Rediriger vers la page de connexion avec succès
                 header("Location: connexion.php?success=1");
                 exit();
             } else {
                 $error = "❌ Erreur lors de l'inscription.";
             }
         } catch (Exception $e) {
+            // Probablement email déjà utilisé
             $error = "⚠️ Cet email est déjà utilisé.";
         }
 
@@ -56,7 +46,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <title>Inscription - Notly</title>
   <link rel="stylesheet" href="../css/inscription.css">
 </head>
-
 <body>
   <div class="container">
     <h1>Créer un compte</h1>

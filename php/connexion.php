@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
 
             $success = true;
-            header("refresh:2;url=acceuil.php");
+            header("refresh:2;url=dashboard.php"); // Redirection après 2 secondes
         } else {
             $error = "⚠️ Mot de passe incorrect.";
         }
